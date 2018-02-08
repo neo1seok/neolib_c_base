@@ -1,0 +1,12 @@
+
+
+include ./Makefile.conf
+#CC = gcc-multilib
+#CXX = g++-multilib
+#LD = $(CXX)
+OUTDIR = ../lib/gnu_32
+TITLE=libIUST-100
+CFLAGS=-m32 -L/usr/libx32/ -lstdc++
+LDFLAGS= -shared -fPIC -ldl -m32
+LIB = ../lib/gnu_32/libcrypto.a
+include ./Makefile.def
