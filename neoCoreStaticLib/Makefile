@@ -16,15 +16,15 @@ INC = -Iinclude -I../include
 DEFCFLAGS=-Wall -O2 -fPIC 
 DEFINC=-D_USE_UTF8_ -DNEOUSEMBCS -DNEO_STATIC -DLSA_EXPORTS_NOUSE
 # -DNEODEBUG
-DEFCFLAGS=-Wall -O2 -fPIC -Wl,-Bsymbolic
-LIB = ../lib/gnu/libcrypto.a
-LDFLAGS      = -shared -fPIC  -L../lib/gnu -lslab_usb_spi -ldl
+DEFCFLAGS=-Wall -O2 -fPIC -Wl,-Bsymbolic -std=gnu++11
+#LIB = ../lib/gnu/libcrypto.a
+LDFLAGS      = -shared -fPIC  -L../lib/gnu -ldl
 OUTDIR = ../lib/gnu
 
 
 ##############################################################
 
-TITLE=lib_neolib_c_base
+TITLE=libneolib_c_base
 #CFLAGS=-L/usr/lib32/ -lstdc++
 #DEFINC=-D_USE_UTF8_ -DNEOUSEMBCS -DNEO_STATIC -DLSA_EXPORTS_NOUSE  -DNEODEBUG
 
@@ -74,7 +74,6 @@ OBJ_RELEASE = $(OBJDIR_RELEASE)/CSerialRS232.o \
 	$(OBJDIR_RELEASE)/NeoCoLib.o \
 	$(OBJDIR_RELEASE)/neoDebug.o \
 	$(OBJDIR_RELEASE)/rs232.o \
-	$(OBJDIR_RELEASE)/Util.o \
 	$(OBJDIR_RELEASE)/SystemUtil.o \
 	$(OBJDIR_RELEASE)/SystemUtil4Linux.o 		
 
@@ -95,11 +94,6 @@ before_release:
 
 after_release: 
 	mkdir -p ../include
-	cp -f include/IUST-100.h ../include/
-	cp -f include/iust100-proto-define.h ../include/
-	cp -f ../../BASE/include/neoCoLib.h ../include/
-	cp -f ../../BASE/include/neoDebug.h ../include/
-	cp -f ../../BASE/include/comdef.h ../include/
 
 static: before_release out_release after_release
 share: before_release out_shared_release after_release
