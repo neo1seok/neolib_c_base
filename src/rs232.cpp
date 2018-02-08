@@ -225,7 +225,8 @@ http://pubs.opengroup.org/onlinepubs/7908799/xsh/termios.h.html
 http://man7.org/linux/man-pages/man3/termios.3.html
 */
   
-  NEO_DEBUG("open comport ");
+
+  NEO_DEBUG("open comport:%s ",comports[comport_number]);
   Cport[comport_number] = open(comports[comport_number], O_RDWR | O_NOCTTY | O_NDELAY);
   if(Cport[comport_number]==-1)
   {

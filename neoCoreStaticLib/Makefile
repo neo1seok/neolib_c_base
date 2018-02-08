@@ -14,7 +14,7 @@ OBJDIR = obj/gnu
 INC = -Iinclude -I../include
 #DEFINC=-D_USE_UTF8_ -DNEOUSEMBCS -DNEO_STATIC -DLSA_EXPORTS_NOUSE -D__NOTUSEOPENSSL__
 DEFCFLAGS=-Wall -O2 -fPIC 
-DEFINC=-D_USE_UTF8_ -DNEOUSEMBCS -DNEO_STATIC -DLSA_EXPORTS_NOUSE
+DEFINC=-D_USE_UTF8_ -DNEOUSEMBCS -DNEODEBUG -DNEO_STATIC -DLSA_EXPORTS_NOUSE
 # -DNEODEBUG
 DEFCFLAGS=-Wall -O2 -fPIC -Wl,-Bsymbolic -std=gnu++11
 #LIB = ../lib/gnu/libcrypto.a
@@ -54,7 +54,7 @@ RCFLAGS_RELEASE = $(RCFLAGS)
 LIBDIR_RELEASE = $(LIBDIR)
 LIB_RELEASE = $(LIB)
 LDFLAGS_RELEASE = $(LDFLAGS) -s
-
+DST_DIR = /home/pi/project/g3_api/lib/gnu/
 
 
 OUT_RELEASE = $(OUTDIR)/$(TITLE).a
@@ -94,6 +94,7 @@ before_release:
 
 after_release: 
 	mkdir -p ../include
+	
 
 static: before_release out_release after_release
 share: before_release out_shared_release after_release
@@ -101,11 +102,13 @@ share: before_release out_shared_release after_release
 
 out_release: $(OBJ_RELEASE_ALL)
 	$(AR) rcs $(OUT_RELEASE) $(OBJ_RELEASE_ALL) $(LIB_RELEASE)
+	cp -p $(OUT_RELEASE)  $(DST_DIR)
 	
 out_shared_release: $(OBJ_RELEASE_ALL)
 	echo $(OUT_SHARED_RELEASE)
 	echo $(LDFLAGS)
 	$(CXX) ${LDFLAGS} -o $(OUT_SHARED_RELEASE) $(OBJ_RELEASE_ALL) $(LIB_RELEASE)
+	cp -p $(OUT_SHARED_RELEASE)  $(DST_DIR)
 
 
 	
