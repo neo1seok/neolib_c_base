@@ -155,16 +155,6 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\BASE\src\EtcModule.cpp" />
-    <ClCompile Include="..\..\BASE\src\NeoSystemLib.cpp" />
-    <ClCompile Include="..\..\BASE\src\SystemUtil.cpp" />
-    <ClCompile Include="..\..\BASE\src\SystemUtil4windows.cpp" />
-    <ClCompile Include="..\..\BASE\src\MemoryNode.cpp" />
-    <ClCompile Include="..\..\BASE\src\NeoCoLib.cpp" />
-    <ClCompile Include="..\..\BASE\src\neoDebug.cpp" />
-    <ClCompile Include="..\..\BASE\src\rs232.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="..\..\BASE\include\CEcc.h" />
     <ClInclude Include="..\..\BASE\include\comdef.h" />
     <ClInclude Include="..\..\BASE\include\commfunc.h" />
@@ -182,6 +172,12 @@
     <ClInclude Include="..\..\BASE\include\CBaseCrypt.h" />
     <ClInclude Include="..\..\BASE\include\utf8.h" />
     <ClInclude Include="..\..\BASE\include\Util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\CSerialRS232.cpp" />
+    <ClCompile Include="..\src\NeoCoLib.cpp" />
+    <ClCompile Include="..\src\neoDebug.cpp" />
+    <ClCompile Include="..\src\rs232.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
