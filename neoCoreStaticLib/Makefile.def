@@ -32,16 +32,21 @@ OUT_SHARED_DEBUG = $(OUTDIR)/$(TITLE)d.so
 
 
 OBJDIR_RELEASE = $(OBJDIR)
-OBJ_RELEASE = $(OBJDIR_RELEASE)/CtrlIUST100.o \
-					$(OBJDIR_RELEASE)/IUST-100.o \
-					$(OBJDIR_RELEASE)/CtrlIUST100_PR.o \
-					$(OBJDIR_RELEASE)/tokenapi.o
-					
 
 
+
+OBJ_RELEASE = $(OBJDIR_RELEASE)/CSerialCP2130.o \
+	$(OBJDIR_RELEASE)/EtcModule.o \
+	$(OBJDIR_RELEASE)/MemoryNode.o \
+	$(OBJDIR_RELEASE)/NeoCoLib.o \
+	$(OBJDIR_RELEASE)/neoDebug.o \
+	$(OBJDIR_RELEASE)/rs232.o \
+	$(OBJDIR_RELEASE)/Util.o \
+	$(OBJDIR_RELEASE)/SystemUtil.o \
+	$(OBJDIR_RELEASE)/SystemUtil4Linux.o 		
+
 					
-					
-OBJ_RELEASE_ALL =  $(OBJ_BASE_RELEASE) $(OBJ_RELEASE)  $(DEP_RELEASE)
+OBJ_RELEASE_ALL =  $(OBJ_RELEASE)  $(DEP_RELEASE)
 
 all: static
 
@@ -50,10 +55,10 @@ clean: clean_release
 before_release: 
 	test -d bin/Release || mkdir -p bin/Release
 	test -d $(OUTDIR) || mkdir -p $(OUTDIR)
-	test -d $(OBJDIR_BASE_RELEASE) || mkdir -p $(OBJDIR_RELEASE)
-	test -d $(OBJDIR_BASE_RELEASE) || mkdir -p $(OBJDIR_RELEASE)
+	#test -d $(OBJDIR_BASE_RELEASE) || mkdir -p $(OBJDIR_RELEASE)
+	#test -d $(OBJDIR_BASE_RELEASE) || mkdir -p $(OBJDIR_RELEASE)
 	test -d $(OBJDIR_RELEASE) || mkdir -p $(OBJDIR_RELEASE)
-	test -d $(OBJDIR_RELEASE2) || mkdir -p $(OBJDIR_RELEASE2)
+	#test -d $(OBJDIR_RELEASE2) || mkdir -p $(OBJDIR_RELEASE2)
 
 after_release: 
 	mkdir -p ../include
@@ -77,10 +82,7 @@ out_shared_release: $(OBJ_RELEASE_ALL)
 
 
 	
-$(OBJDIR_BASE_RELEASE)/%.o: ../../BASE/src/%.cpp
-	$(CXX) $(CFLAGS_RELEASE) $(INC_RELEASE)  -c -o $@ $<
-	
-$(OBJDIR_RELEASE)/%.o: src/%.cpp
+$(OBJDIR_RELEASE)/%.o: ../src/%.cpp
 	$(CXX) $(CFLAGS_RELEASE) $(INC_RELEASE)  -c -o $@ $<	
 	
 	
