@@ -95,9 +95,6 @@
     <ClCompile Include="..\src\SystemUtil.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\TempPF.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\NeoSystemLib.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>

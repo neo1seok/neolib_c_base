@@ -1,7 +1,0 @@
-
-
-include ./Makefile.conf
-
-TITLE=libIUST-100
-#CFLAGS=-L/usr/lib32/ -lstdc++
-include ./Makefile.def

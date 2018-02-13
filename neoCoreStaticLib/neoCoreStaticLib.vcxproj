@@ -184,7 +184,6 @@
     <ClCompile Include="..\src\rs232.cpp" />
     <ClCompile Include="..\src\SystemUtil.cpp" />
     <ClCompile Include="..\src\SystemUtil4windows.cpp" />
-    <ClCompile Include="..\src\TempPF.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
