@@ -23,8 +23,8 @@ OUTDIR = ../lib/gnu
 
 
 ##############################################################
-
-TITLE=libneolib_c_base
+NAME=neo_c_lib
+TITLE=lib$(NAME)
 #CFLAGS=-L/usr/lib32/ -lstdc++
 #DEFINC=-D_USE_UTF8_ -DNEOUSEMBCS -DNEO_STATIC -DLSA_EXPORTS_NOUSE  -DNEODEBUG
 
@@ -54,8 +54,10 @@ RCFLAGS_RELEASE = $(RCFLAGS)
 LIBDIR_RELEASE = $(LIBDIR)
 LIB_RELEASE = $(LIB)
 LDFLAGS_RELEASE = $(LDFLAGS) -s
-DST_DIR = /home/pi/project/g3_api/lib/gnu/
-
+DST_DIR = /usr/local
+#DST_BIN_DIR = $(DST_DIR)/lib/gnu/
+DST_BIN_LIB = $(DST_DIR)/lib
+DST_BIN_INC = $(DST_DIR)/include/$(NAME)
 
 OUT_RELEASE = $(OUTDIR)/$(TITLE).a
 OUT_SHARED_RELEASE = $(OUTDIR)/$(TITLE).so
@@ -93,22 +95,38 @@ before_release:
 	#test -d $(OBJDIR_RELEASE2) || mkdir -p $(OBJDIR_RELEASE2)
 
 after_release: 
-	mkdir -p ../include
+	echo 'none'
+	#mkdir -p ../include
+	#cp -pr ../include/*.h $(DST_DIR)/include
 	
 
 static: before_release out_release after_release
 share: before_release out_shared_release after_release
 
 
+
+lib_install:
+	cp -p $(OUT_RELEASE)  $(DST_BIN_LIB)
+	cp -pr ../include/*.h $(DST_BIN_INC)
+	
+share_install:
+	cp -p $(OUT_SHARED_RELEASE)  $(DST_BIN_LIB)
+	mkdir -p $(DST_BIN_INC)
+	cp -pr ../include/*.h $(DST_BIN_INC)
+	ldconfig
+	#ln -s $(OUT_SHARED_RELEASE) $(OUT_SHARED_RELEASE).0.0.1
+
+		
+
 out_release: $(OBJ_RELEASE_ALL)
 	$(AR) rcs $(OUT_RELEASE) $(OBJ_RELEASE_ALL) $(LIB_RELEASE)
-	cp -p $(OUT_RELEASE)  $(DST_DIR)
+	
 	
 out_shared_release: $(OBJ_RELEASE_ALL)
 	echo $(OUT_SHARED_RELEASE)
 	echo $(LDFLAGS)
 	$(CXX) ${LDFLAGS} -o $(OUT_SHARED_RELEASE) $(OBJ_RELEASE_ALL) $(LIB_RELEASE)
-	cp -p $(OUT_SHARED_RELEASE)  $(DST_DIR)
+	#cp -p $(OUT_SHARED_RELEASE)  $(DST_BIN_DIR)
 
 
 	
