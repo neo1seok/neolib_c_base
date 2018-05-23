@@ -68,6 +68,7 @@ TemporaryGeneratedFile_*.cs
 *.sdf
 *.class
 *.pyc
+*.txt
 workspace.xml
 ipch/
 obj/
