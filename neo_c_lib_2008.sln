@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "neoCoreStaticLib", "neoCoreStaticLib.vcproj", "{2027B18D-E402-42B5-BAF4-9B1DEF2CDA49}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "neo_c_lib", "neo_c_lib/neo_c_lib.vcproj", "{2027B18D-E402-42B5-BAF4-9B1DEF2CDA49}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
