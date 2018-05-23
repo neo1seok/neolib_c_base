@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "neo_c_lib", "neo_c_lib/neo_c_lib.vcxproj", "{DFA52E27-18C9-4434-87FA-9C239A0DC1BF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "neo_c_lib", "neo_c_lib\neo_c_lib.vcxproj", "{DFA52E27-18C9-4434-87FA-9C239A0DC1BF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sample", "sample\sample.vcxproj", "{52457A4B-35C6-473C-950C-BC45A0263C34}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,18 @@ Global
 		{DFA52E27-18C9-4434-87FA-9C239A0DC1BF}.Release|Win32.Build.0 = Release|Win32
 		{DFA52E27-18C9-4434-87FA-9C239A0DC1BF}.Release|x64.ActiveCfg = Release|x64
 		{DFA52E27-18C9-4434-87FA-9C239A0DC1BF}.Release|x64.Build.0 = Release|x64
+		{52457A4B-35C6-473C-950C-BC45A0263C34}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{52457A4B-35C6-473C-950C-BC45A0263C34}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{52457A4B-35C6-473C-950C-BC45A0263C34}.Debug|Win32.ActiveCfg = Debug|Win32
+		{52457A4B-35C6-473C-950C-BC45A0263C34}.Debug|Win32.Build.0 = Debug|Win32
+		{52457A4B-35C6-473C-950C-BC45A0263C34}.Debug|x64.ActiveCfg = Debug|x64
+		{52457A4B-35C6-473C-950C-BC45A0263C34}.Debug|x64.Build.0 = Debug|x64
+		{52457A4B-35C6-473C-950C-BC45A0263C34}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{52457A4B-35C6-473C-950C-BC45A0263C34}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{52457A4B-35C6-473C-950C-BC45A0263C34}.Release|Win32.ActiveCfg = Release|Win32
+		{52457A4B-35C6-473C-950C-BC45A0263C34}.Release|Win32.Build.0 = Release|Win32
+		{52457A4B-35C6-473C-950C-BC45A0263C34}.Release|x64.ActiveCfg = Release|x64
+		{52457A4B-35C6-473C-950C-BC45A0263C34}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
