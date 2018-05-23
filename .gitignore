@@ -71,6 +71,7 @@ TemporaryGeneratedFile_*.cs
 workspace.xml
 ipch/
 obj/
+lib/
 .metadata/
 packages/
 [Bb]in

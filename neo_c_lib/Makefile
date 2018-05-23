@@ -110,6 +110,7 @@ after_release:
 before_install: 
 	test -d $(DST_DIR_LIB) || mkdir -p $(DST_DIR_LIB)
 	test -d $(DST_DIR_INC) || mkdir -p $(DST_DIR_INC)
+	./publish_include.py -f
 	cp -p ../include/*.h  $(DST_DIR_INC)
 	
 
