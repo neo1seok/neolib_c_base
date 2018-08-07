@@ -1,0 +1,5 @@
+CC_SRC = arm-linux-gnueabi-gcc
+CXX_SRC = arm-linux-gnueabi-g++
+AR_SRC = arm-linux-gnueabi-ar
+PLATFORM = gnu-arm
+include Makefile.def
