@@ -103,7 +103,7 @@
       <DebugInformationFormat>None</DebugInformationFormat>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>neo_c_libd.lib</AdditionalDependencies>
+      <AdditionalDependencies>neo_c_libd.lib;</AdditionalDependencies>
       <AdditionalLibraryDirectories>../../lib/win32;../lib/Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AssemblyDebug>true</AssemblyDebug>
@@ -128,7 +128,7 @@
       <AdditionalIncludeDirectories>../include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>neo_c_libd.lib</AdditionalDependencies>
+      <AdditionalDependencies>neo_c_libd.lib;</AdditionalDependencies>
       <AdditionalLibraryDirectories>../../lib/x64;../lib/x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AssemblyDebug>true</AssemblyDebug>
@@ -145,7 +145,7 @@
     </PreBuildEvent>
     <ClCompile>
       <PreprocessorDefinitions>_DEFNEODEF_;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -175,7 +175,7 @@
       <AdditionalIncludeDirectories>../include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>neo_c_lib.lib;libeay32.lib;ssleay32.lib</AdditionalDependencies>
+      <AdditionalDependencies>neo_c_lib.lib;</AdditionalDependencies>
       <AdditionalLibraryDirectories>../../lib/x64;../lib/x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <TargetMachine>MachineX64</TargetMachine>
