@@ -12,7 +12,7 @@
 #AR = ar
 
 CC = $(CC_SRC)
-CCX = $(CXX_SRC)
+CXX = $(CXX_SRC)
 AR = $(AR_SRC)
 
 
@@ -52,7 +52,7 @@ INC = -Iinclude -I../include
 CDEFINE=-D_USE_UTF8_ -DNEOUSEMBCS -DNEODEBUG -DNEO_STATIC -DLSA_EXPORTS_NOUSE
 #example -DBBBB -DCCCCCC
 
-CFLAGS=-Wall -O2 -fPIC -Wl,-Bsymbolic -std=gnu++11
+CFLAGS=-Wall -O2 -fPIC -Wl,-Bsymbolic -std=gnu++11 
 #example -Wall -O2 -fPIC -Wl,-Bsymbolic -std=gnu++11
 
 LDFLAGS = -shared -fPIC  -L../lib/gnu -ldl
