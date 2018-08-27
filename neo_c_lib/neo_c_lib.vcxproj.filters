@@ -71,31 +71,31 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\NeoCoLib.cpp">
+    <ClCompile Include=".\src\NeoCoLib.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\rs232.cpp">
+    <ClCompile Include=".\src\rs232.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\neoDebug.cpp">
+    <ClCompile Include=".\src\neoDebug.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\CSerialRS232.cpp">
+    <ClCompile Include=".\src\CSerialRS232.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\MemoryNode.cpp">
+    <ClCompile Include=".\src\MemoryNode.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\EtcModule.cpp">
+    <ClCompile Include=".\src\EtcModule.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\SystemUtil4windows.cpp">
+    <ClCompile Include=".\src\SystemUtil4windows.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\SystemUtil.cpp">
+    <ClCompile Include=".\src\SystemUtil.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\NeoSystemLib.cpp">
+    <ClCompile Include=".\src\NeoSystemLib.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

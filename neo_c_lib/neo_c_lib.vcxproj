@@ -181,15 +181,15 @@
     <ClInclude Include="..\..\BASE\include\Util.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\CSerialRS232.cpp" />
-    <ClCompile Include="..\src\EtcModule.cpp" />
-    <ClCompile Include="..\src\MemoryNode.cpp" />
-    <ClCompile Include="..\src\NeoCoLib.cpp" />
-    <ClCompile Include="..\src\neoDebug.cpp" />
-    <ClCompile Include="..\src\NeoSystemLib.cpp" />
-    <ClCompile Include="..\src\rs232.cpp" />
-    <ClCompile Include="..\src\SystemUtil.cpp" />
-    <ClCompile Include="..\src\SystemUtil4windows.cpp" />
+    <ClCompile Include=".\src\CSerialRS232.cpp" />
+    <ClCompile Include=".\src\EtcModule.cpp" />
+    <ClCompile Include=".\src\MemoryNode.cpp" />
+    <ClCompile Include=".\src\NeoCoLib.cpp" />
+    <ClCompile Include=".\src\neoDebug.cpp" />
+    <ClCompile Include=".\src\NeoSystemLib.cpp" />
+    <ClCompile Include=".\src\rs232.cpp" />
+    <ClCompile Include=".\src\SystemUtil.cpp" />
+    <ClCompile Include=".\src\SystemUtil4windows.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
